@@ -62,7 +62,7 @@ header .search-bar .ser-btn {
 
 .post-container .post {
   width: 18rem;
-  height: 22rem;
+  height: 23rem;
   border-radius: 1rem;
   margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -116,16 +116,21 @@ header .search-bar .ser-btn {
 }
 .address {
   padding: 0 1rem;
+  line-height: 1.2rem;
 }
 .address p {
   font-size: 0.8rem;
   color: gray;
 }
-.address h3 {
+.address h4 {
   color: gray;
+}
+.address b{
+  font-size: .9rem;
 }
 .add-icon {
   color: rgb(236, 236, 61);
+  margin-left:-1rem ;
 }
 .btn-container button:hover{
   transform: scale(1.1);
@@ -173,4 +178,15 @@ nav ul li span {
 nav ul li:hover{
   cursor: pointer;
   color: aqua;
+}
+sub{
+  font-size: 0.6rem;
+  color: aqua;
+}
+
+
+@media only screen and (max-width:768px){
+  .main-container{
+    margin: 1rem auto;
+  }
 }
