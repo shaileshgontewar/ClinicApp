@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { AiFillStar, AiFillHome } from "react-icons/ai";
-// import { Data } from "../../context/GlobalStore";
 import axios from "axios";
 const client = axios.create({
-  baseURL: "https://api.soowgood.com/api/Searches/Provider",
+  baseURL: "https://api.soowgood.com",
 });
 
 const Post = () => {
-  // const [data] = useContext(Data);
   const [post, setPost] = useState([]);
   console.log(post);
   useEffect(() => {
@@ -16,8 +14,7 @@ const Post = () => {
     const fetchData = async () => {
       try {
         const response = await client.post(
-          "/",
-
+          "/api/Searches/Provider",
           {
             UserRole: "Provider",
           },
@@ -25,31 +22,26 @@ const Post = () => {
         );
         setPost(response.data);
       } catch (err) {
-        console.log(err);
+        console.log(err.message);
       }
     };
     fetchData();
     return () => {
-      console.log("data unmounted....");
       controller.abort();
     };
   }, []);
 
   return (
     <>
-      <div className="container">
+      <div>
         <div className="post-container">
           {post.map((post) => {
             return (
-              <div className="post" key={post.providerId}>
+              <div className="post" key={post.clinicId}>
                 <div className="info">
                   <img
-                    src={
-                      post.providerImage
-                        ? post.providerImage
-                        : "./img/img11.jpg"
-                    }
-                    alt="doct"
+                    src={"https://api.soowgood.com/img/" + post.providerImage}
+                    alt={post.providerImage}
                   />
                   <h3>{post.name}</h3>
                   <p>

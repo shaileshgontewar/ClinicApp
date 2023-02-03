@@ -1,14 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  border: none;
-  text-decoration: none;
-  list-style-type: none;
-  transition: all .1s linear;
-}
+
 
 body {
   background-color: #0000001a;
@@ -109,7 +99,7 @@ header .search-bar .ser-btn {
   color: aqua;
 }
 .view-btn {
-  background-color: aquamarine;
+  background-color: aqua;
 }
 .book-btn {
   background-color: #090979;
